@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#24070d">
+
+<title>Shizuka & Nobitha | Wedding Invitation</title>
+
+<style>
+/* =========================================================
+   SHIZUKA & NOBITHA — PREMIUM WEDDING INVITATION
+   SINGLE HTML FILE — NO FRAMEWORKS
+   ========================================================= */
+
+:root {
+    --maroon: #25070d;
+    --deep-red: #4a0d19;
+    --wine: #68192a;
+    --cream: #fff4dc;
+    --gold: #d7a846;
+    --light-gold: #f6d98b;
+    --soft: #d9c0a3;
+    --white: #fffaf0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--maroon);
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+.gold-line {
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--light-gold),
+        transparent
+    );
+    margin: 20px auto;
+}
+
+.kicker {
+    color: var(--light-gold);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: clamp(38px, 6vw, 70px);
+    font-weight: 400;
+    margin: 15px 0;
+}
+
+.lead {
+    max-width: 700px;
+    margin: auto;
+    color: var(--soft);
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.amp {
+    color: var(--light-gold);
+    font-style: italic;
+}
+
+/* =========================================================
+   COVER
+   ========================================================= */
+
+.cover {
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(125, 31, 50, .9),
+            rgba(49, 8, 18, .98) 55%,
+            #100308 100%
+        );
+}
+
+.cover::before {
+    content: "";
+    position: absolute;
+
+    width: 70vmin;
+    height: 70vmin;
+
+    border: 1px solid rgba(246, 217, 139, .25);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 25px rgba(246,217,139,.03),
+        0 0 0 50px rgba(246,217,139,.02),
+        inset 0 0 100px rgba(246,217,139,.05);
+
+    animation: rotate 50s linear infinite;
+}
+
+.cover-border {
+    position: absolute;
+    inset: 18px;
+
+    border: 1px solid rgba(246,217,139,.35);
+
+    pointer-events: none;
+}
+
+.cover-border::before,
+.cover-border::after {
+    position: absolute;
+
+    color: var(--light-gold);
+    font-size: 28px;
+
+    background: var(--maroon);
+    padding: 5px 15px;
+}
+
+.cover-border::before {
+    content: "✦";
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cover-border::after {
+    content: "✦";
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cover-content {
+    position: relative;
+    z-index: 5;
+
+    padding: 30px;
+
+    animation: entrance 1.5s ease;
+}
+
+.invitation-title {
+    margin-top: 25px;
+
+    font-size: clamp(40px, 8vw, 85px);
+    font-weight: 400;
+    line-height: 1;
+
+    color: var(--white);
+}
+
+.names {
+    margin-top: 25px;
+
+    font-size: clamp(38px, 7vw, 72px);
+
+    font-style: italic;
+}
+
+.cover-description {
+    margin: 20px 0 35px;
+
+    font-family: Arial, sans-serif;
+
+    color: var(--soft);
+
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.open-button {
+    border: 1px solid var(--light-gold);
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    color: #2b090e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7db8c,
+            #b67d2c
+        );
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 0 30px rgba(246,217,139,.2),
+        0 15px 40px rgba(0,0,0,.35);
+
+    animation: pulse 2s infinite;
+
+    transition: .4s;
+}
+
+.open-button:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+
+/* =========================================================
+   DIYA
+   ========================================================= */
+
+.diya {
+    position: absolute;
+
+    bottom: 7%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 60px;
+    height: 25px;
+
+    background: linear-gradient(
+        #f5ce72,
+        #92571c
+    );
+
+    border-radius: 50%;
+}
+
+.flame {
+    position: absolute;
+
+    width: 18px;
+    height: 30px;
+
+    left: 50%;
+    top: -32px;
+
+    transform: translateX(-50%) rotate(45deg);
+
+    border-radius: 50% 0 50% 50%;
+
+    background: #fff1aa;
+
+    box-shadow:
+        0 0 20px #ffd35c,
+        0 0 60px #ffb82e;
+
+    animation: flame .7s infinite alternate;
+}
+
+/* =========================================================
+   STORY
+   ========================================================= */
+
+.story {
+    display: none;
+}
+
+.story.active {
+    display: block;
+}
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+
+.welcome {
+    padding: 120px 0;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            #18050a,
+            #390b17,
+            #18050a
+        );
+}
+
+.welcome-card {
+    padding: 70px 30px;
+
+    border: 1px solid rgba(246,217,139,.25);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.015)
+        );
+
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+}
+
+.quote {
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    font-size: clamp(26px, 5vw, 48px);
+
+    font-style: italic;
+
+    line-height: 1.4;
+}
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+
+.events {
+    padding: 110px 0;
+
+    background: #120407;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.events-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 18px;
+}
+
+.event-card {
+    background:
+        linear-gradient(
+            160deg,
+            rgba(104,25,42,.8),
+            rgba(25,5,10,.95)
+        );
+
+    border: 1px solid rgba(246,217,139,.2);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .5s;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+
+    border-color:
+        rgba(246,217,139,.55);
+}
+
+.event-image {
+    height: 190px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 65px;
+
+    background:
+        radial-gradient(
+            circle,
+            #a63743,
+            #4c0c19
+        );
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-content h3 {
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+.event-date {
+    color: var(--light-gold);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.event-description {
+    margin: 13px 0;
+
+    color: var(--soft);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.venue {
+    padding-top: 12px;
+
+    border-top:
+        1px solid rgba(246,217,139,.15);
+
+    color: var(--soft);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+/* =========================================================
+   COUPLE
+   ========================================================= */
+
+.couple {
+    padding: 120px 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #751d32,
+            #320914 55%,
+            #100307
+        );
+}
+
+.couple-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+.person {
+    text-align: center;
+}
+
+.photo-frame {
+    width: min(300px, 100%);
+
+    aspect-ratio: 4 / 5;
+
+    margin: auto;
+
+    padding: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7d98c,
+            #a56a22,
+            #f7df91
+        );
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.5);
+}
+
+.photo {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #3a101a;
+}
+
+.person h3 {
+    margin-top: 20px;
+
+    font-size: 32px;
+
+    font-weight: 400;
+}
+
+.person small {
+    color: var(--light-gold);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.couple-center {
+    text-align: center;
+}
+
+.heart {
+    font-size: 75px;
+
+    color: #f1b7a9;
+
+    filter:
+        drop-shadow(
+            0 0 25px rgba(255,100,100,.4)
+        );
+
+    animation: heartbeat 1.7s infinite;
+}
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.message {
+    padding: 110px 0;
+
+    background:
+        #f8ead1;
+
+    color: #40121a;
+
+    text-align: center;
+}
+
+.message .kicker {
+    color: #9a641f;
+}
+
+.message h2 {
+    color: #40121a;
+}
+
+.message .lead {
+    color: #70564b;
+}
+
+.message-card {
+    padding: 60px 30px;
+
+    border: 1px solid #c69d51;
+
+    background:
+        rgba(255,255,255,.4);
+}
+
+.hearts {
+    font-size: 35px;
+
+    color: #8c2639;
+
+    letter-spacing: 12px;
+}
+
+.message-text {
+    max-width: 750px;
+
+    margin: 25px auto;
+
+    font-size: clamp(22px, 4vw, 35px);
+
+    line-height: 1.6;
+
+    font-style: italic;
+}
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.final {
+    min-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #751d31,
+            #330914 55%,
+            #100307
+        );
+}
+
+.final-card {
+    width: min(700px, 92%);
+
+    padding: 65px 25px;
+
+    border: 1px solid rgba(246,217,139,.4);
+
+    background:
+        rgba(15,3,7,.4);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.5);
+}
+
+.join-title {
+    font-size: clamp(40px, 7vw, 75px);
+
+    font-weight: 400;
+
+    margin: 20px 0;
+}
+
+.rsvp-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 32px;
+
+    border-radius: 50px;
+
+    color: #2b090e;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7db8c,
+            #b67d2c
+        );
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+.music-button {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 100;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--light-gold);
+
+    background:
+        rgba(40,7,14,.9);
+
+    color: var(--light-gold);
+
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+/* =========================================================
+   PETALS
+   ========================================================= */
+
+.petal {
+    position: fixed;
+
+    top: -30px;
+
+    width: 10px;
+    height: 16px;
+
+    background: #e99aa0;
+
+    border-radius: 100% 0 100% 0;
+
+    z-index: 90;
+
+    pointer-events: none;
+
+    animation: falling linear forwards;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes entrance {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    50% {
+        box-shadow:
+            0 0 0 12px rgba(246,217,139,0),
+            0 15px 40px rgba(0,0,0,.35);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flame {
+    to {
+        transform:
+            translateX(-50%)
+            rotate(45deg)
+            scale(1.15);
+    }
+}
+
+@keyframes heartbeat {
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@keyframes falling {
+    to {
+        transform:
+            translate3d(var(--drift), 110vh, 0)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width: 950px) {
+
+    .events-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .couple-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .couple-center {
+        order: -1;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .cover-border {
+        inset: 10px;
+    }
+
+    .invitation-title {
+        font-size: 45px;
+    }
+
+    .names {
+        font-size: 40px;
+    }
+
+    .welcome,
+    .events,
+    .couple,
+    .message {
+        padding: 75px 0;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-image {
+        height: 210px;
+    }
+
+    .photo-frame {
+        width: 245px;
+    }
+
+    .final-card {
+        padding: 45px 20px;
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     COVER
+     ========================================================= -->
+
+<section class="cover" id="cover">
+
+    <div class="cover-border"></div>
+
+    <div class="cover-content">
+
+        <div class="kicker">
+            You Are Warmly Invited
+        </div>
+
+        <h1 class="invitation-title">
+            A Celebration<br>
+            of Love
+        </h1>
+
+        <div class="gold-line"></div>
+
+        <!-- [EDIT NAMES] -->
+        <div class="names">
+            Shizuka
+            <span class="amp">&</span>
+            Nobitha
+        </div>
+
+        <p class="cover-description">
+            TWO HEARTS · ONE BEAUTIFUL JOURNEY · A LIFETIME TOGETHER
+        </p>
+
+        <button
+            class="open-button"
+            id="openInvitation">
+
+            ✦ Open Our Invitation ✦
+
+        </button>
+
+    </div>
+
+    <div class="diya">
+        <div class="flame"></div>
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STORY CONTENT
+     ========================================================= -->
+
+<main class="story" id="story">
+
+
+<!-- =========================================================
+     WELCOME
+     ========================================================= -->
+
+<section class="welcome">
+
+<div class="container">
+
+<div class="welcome-card reveal">
+
+<div class="kicker">
+    With Love & Blessings
+</div>
+
+<h2>
+    Our Wedding Story Begins
+</h2>
+
+<div class="gold-line"></div>
+
+<p class="quote">
+    “Two hearts, one beautiful journey,
+    and a lifetime of togetherness.”
+</p>
+
+<p class="lead">
+
+    <!-- [EDIT MESSAGE] -->
+
+    With joyful hearts, we invite you to share
+    the laughter, traditions, music and precious
+    moments as we begin this beautiful chapter together.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     EVENTS
+     ========================================================= -->
+
+<section class="events">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="kicker">
+    Save These Moments
+</div>
+
+<h2>
+    Wedding Celebrations
+</h2>
+
+<div class="gold-line"></div>
+
+<p class="lead">
+    A beautiful tapestry of traditions,
+    laughter, music and love.
+</p>
+
+</div>
+
+
+<div class="events-grid">
+
+
+<!-- HALDI -->
+
+<article class="event-card reveal">
+
+<div class="event-image">
+    🌼
+</div>
+
+<div class="event-content">
+
+<h3>
+    Haldi
+</h3>
+
+<div class="event-date">
+
+    <!-- [EDIT DATE & TIME] -->
+
+    [EDIT DATE] · [EDIT TIME]
+
+</div>
+
+<p class="event-description">
+
+    A vibrant celebration filled with
+    turmeric, marigolds, laughter and blessings.
+
+</p>
+
+<div class="venue">
+
+    📍 [EDIT VENUE]
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- MEHENDI -->
+
+<article class="event-card reveal">
+
+<div class="event-image">
+    🌿
+</div>
+
+<div class="event-content">
+
+<h3>
+    Mehendi
+</h3>
+
+<div class="event-date">
+
+    <!-- [EDIT DATE & TIME] -->
+
+    [EDIT DATE] · [EDIT TIME]
+
+</div>
+
+<p class="event-description">
+
+    An enchanting evening of intricate
+    mehendi designs, flowers and celebration.
+
+</p>
+
+<div class="venue">
+
+    📍 [EDIT VENUE]
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- SANGEET -->
+
+<article class="event-card reveal">
+
+<div class="event-image">
+    🎶
+</div>
+
+<div class="event-content">
+
+<h3>
+    Sangeet
+</h3>
+
+<div class="event-date">
+
+    <!-- [EDIT DATE & TIME] -->
+
+    [EDIT DATE] · [EDIT TIME]
+
+</div>
+
+<p class="event-description">
+
+    Music, dance and unforgettable performances
+    beneath a sky of golden lights.
+
+</p>
+
+<div class="venue">
+
+    📍 [EDIT VENUE]
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- WEDDING -->
+
+<article class="event-card reveal">
+
+<div class="event-image">
+    🪷
+</div>
+
+<div class="event-content">
+
+<h3>
+    Wedding Ceremony
+</h3>
+
+<div class="event-date">
+
+    <!-- [EDIT DATE & TIME] -->
+
+    [EDIT DATE] · [EDIT TIME]
+
+</div>
+
+<p class="event-description">
+
+    Sacred vows, a beautiful mandapam,
+    blessings and the beginning of forever.
+
+</p>
+
+<div class="venue">
+
+    📍 [EDIT VENUE]
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- RECEPTION -->
+
+<article class="event-card reveal">
+
+<div class="event-image">
+    ✨
+</div>
+
+<div class="event-content">
+
+<h3>
+    Reception
+</h3>
+
+<div class="event-date">
+
+    <!-- [EDIT DATE & TIME] -->
+
+    [EDIT DATE] · [EDIT TIME]
+
+</div>
+
+<p class="event-description">
+
+    An elegant evening of dinner,
+    photographs, music and celebration.
+
+</p>
+
+<div class="venue">
+
+    📍 [EDIT VENUE]
+
+</div>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     COUPLE
+     ========================================================= -->
+
+<section class="couple">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div class="kicker">
+    The Beautiful Couple
+</div>
+
+<h2>
+    Two Souls, One Story
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+
+<div class="couple-grid">
+
+
+<!-- SHIZUKA -->
+
+<div class="person reveal">
+
+<div class="photo-frame">
+
+<!-- =====================================================
+     [EDIT PHOTO]
+
+     Replace:
+     photos/shizuka.jpg
+
+     with your actual image.
+
+     The website does NOT modify the image itself.
+     ===================================================== -->
+
+<img
+    class="photo"
+    src="photos/shizuka.jpg"
+    alt="Shizuka"
+>
+
+</div>
+
+<h3>
+    Shizuka
+</h3>
+
+<small>
+    [EDIT · BRIDE / PARTNER]
+</small>
+
+</div>
+
+
+<!-- CENTER -->
+
+<div class="couple-center reveal">
+
+<div class="heart">
+    ♥
+</div>
+
+<h2>
+
+    Shizuka
+    <br>
+
+    <span class="amp">
+        &
+    </span>
+
+    <br>
+
+    Nobitha
+
+</h2>
+
+<p class="lead">
+    Together is a beautiful place to be.
+</p>
+
+</div>
+
+
+<!-- NOBITHA -->
+
+<div class="person reveal">
+
+<div class="photo-frame">
+
+<!-- =====================================================
+     [EDIT PHOTO]
+
+     Replace:
+     photos/nobitha.jpg
+     ===================================================== -->
+
+<img
+    class="photo"
+    src="photos/nobitha.jpg"
+    alt="Nobitha"
+>
+
+</div>
+
+<h3>
+    Nobitha
+</h3>
+
+<small>
+    [EDIT · GROOM / PARTNER]
+</small>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     HEARTFELT MESSAGE
+     ========================================================= -->
+
+<section class="message">
+
+<div class="container">
+
+<div class="message-card reveal">
+
+<div class="hearts">
+    ♥ ♥
+</div>
+
+<div class="kicker">
+    A Note From Our Hearts
+</div>
+
+<h2>
+    Two Hearts,
+    One Beautiful Journey
+</h2>
+
+<div class="gold-line"></div>
+
+<p class="message-text">
+
+    “May every sunrise bring us closer,
+    every season give us new memories,
+    and every year remind us of the love
+    that brought us here.”
+
+</p>
+
+<p class="lead">
+
+    <!-- [EDIT MESSAGE] -->
+
+    Your presence, blessings and warm wishes
+    mean more to us than words can say.
+
+    We cannot wait to celebrate this precious
+    day with you.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL
+     ========================================================= -->
+
+<section class="final">
+
+<div class="final-card reveal">
+
+<div class="kicker">
+    With Hearts Full of Joy
+</div>
+
+<h2 class="join-title">
+
+    Join Us &<br>
+    Celebrate Our Love
+
+</h2>
+
+<div class="gold-line"></div>
+
+<p class="lead">
+
+    <!-- [EDIT FINAL MESSAGE] -->
+
+    Come celebrate our forever with
+    delicious food, music, traditions,
+    laughter and the people we love.
+
+</p>
+
+<a
+    href="#"
+    class="rsvp-button"
+    onclick="return false;"
+>
+    RSVP · [EDIT]
+</a>
+
+<p style="
+    margin-top:30px;
+    color:#cdb39b;
+    font-family:Arial,sans-serif;
+    font-size:11px;
+    letter-spacing:2px;
+">
+
+    <!-- [EDIT RSVP CONTACT] -->
+
+    [EDIT RSVP PHONE / EMAIL / WEBSITE]
+
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     MUSIC
+     ========================================================= -->
+
+<button
+    class="music-button"
+    id="musicButton"
+    aria-label="Play wedding music"
+>
+    ♫
+</button>
+
+
+<!-- =========================================================
+     [EDIT MUSIC]
+
+     Put your music here:
+
+     music/wedding.mp3
+
+     The music will NOT autoplay.
+     The visitor must press the music button.
+     ========================================================= -->
+
+<audio
+    id="weddingMusic"
+    loop
+>
+
+    <source
+        src="music/wedding.mp3"
+        type="audio/mpeg"
+    >
+
+</audio>
+
+
+<script>
+
+/* =========================================================
+   OPEN INVITATION
+   ========================================================= */
+
+const openButton =
+    document.getElementById("openInvitation");
+
+const cover =
+    document.getElementById("cover");
+
+const story =
+    document.getElementById("story");
+
+
+openButton.addEventListener("click", function() {
+
+    cover.style.transition =
+        "opacity 1s ease, transform 1.2s ease";
+
+    cover.style.opacity = "0";
+
+    cover.style.transform = "scale(1.05)";
+
+    setTimeout(function() {
+
+        cover.style.display = "none";
+
+        story.classList.add("active");
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+        revealElements();
+
+    }, 900);
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+function revealElements() {
+
+    const elements =
+        document.querySelectorAll(".reveal");
+
+    elements.forEach(function(element) {
+
+        const position =
+            element.getBoundingClientRect().top;
+
+        if(position < window.innerHeight * 0.9) {
+
+            element.classList.add("visible");
+
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    revealElements,
+    { passive: true }
+);
+
+window.addEventListener(
+    "load",
+    revealElements
+);
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+const musicButton =
+    document.getElementById("musicButton");
+
+const music =
+    document.getElementById("weddingMusic");
+
+
+musicButton.addEventListener(
+    "click",
+    async function() {
+
+        try {
+
+            if(music.paused) {
+
+                await music.play();
+
+                musicButton.innerHTML = "❚❚";
+
+            } else {
+
+                music.pause();
+
+                musicButton.innerHTML = "♫";
+
+            }
+
+        } catch(error) {
+
+            alert(
+                "Please add your music file at music/wedding.mp3"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   FLOATING PETALS
+   ========================================================= */
+
+function createPetal() {
+
+    if(!story.classList.contains("active")) {
+        return;
+    }
+
+    const petal =
+        document.createElement("span");
+
+    petal.className = "petal";
+
+    petal.style.left =
+        Math.random() * 100 + "vw";
+
+    petal.style.setProperty(
+        "--drift",
+        (Math.random() * 300 - 150) + "px"
+    );
+
+    petal.style.animationDuration =
+        6 + Math.random() * 7 + "s";
+
+    petal.style.opacity =
+        .5 + Math.random() * .5;
+
+    document.body.appendChild(petal);
+
+    setTimeout(function() {
+
+        petal.remove();
+
+    }, 15000);
+
+}
+
+
+setInterval(
+    createPetal,
+    800
+);
+
+
+/* =========================================================
+   GOLDEN FLOATING LIGHTS
+   ========================================================= */
+
+function createLight() {
+
+    const light =
+        document.createElement("span");
+
+    light.style.position = "fixed";
+
+    light.style.width = "3px";
+    light.style.height = "3px";
+
+    light.style.borderRadius = "50%";
+
+    light.style.background =
+        "#ffe9a5";
+
+    light.style.boxShadow =
+        "0 0 15px #ffd45e";
+
+    light.style.left =
+        Math.random() * 100 + "vw";
+
+    light.style.top =
+        Math.random() * 100 + "vh";
+
+    light.style.pointerEvents =
+        "none";
+
+    light.style.zIndex = "1";
+
+    light.style.opacity =
+        Math.random();
+
+    light.animate(
+        [
+            {
+                transform: "translateY(0)",
+                opacity: .2
+            },
+            {
+                transform: "translateY(-30px)",
+                opacity: 1
+            },
+            {
+                transform: "translateY(0)",
+                opacity: .2
+            }
+        ],
+        {
+            duration:
+                3000 + Math.random() * 4000,
+
+            iterations: Infinity
+        }
+    );
+
+    document.body.appendChild(light);
+
+}
+
+
+for(let i = 0; i < 20; i++) {
+    createLight();
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ========================================================= */
+
+if(
+    window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches
+) {
+
+    document.documentElement.style.scrollBehavior =
+        "auto";
+
+}
+
+</script>
+
+</body>
+</html>
